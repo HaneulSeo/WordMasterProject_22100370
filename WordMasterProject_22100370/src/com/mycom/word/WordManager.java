@@ -40,6 +40,7 @@ public class WordManager {
 	}
 	
 	public void start() {
+		wordCRUD.loadFile();
 		while(true) {
 			int menu = selectMenu();
 			if(menu == 0) {
@@ -56,7 +57,7 @@ public class WordManager {
 				wordCRUD.updateItem();
 			}
 			else if(menu == 6) {
-				wordCRUD.listAll();
+				wordCRUD.deleteItem();
 			}
 		}
 	}

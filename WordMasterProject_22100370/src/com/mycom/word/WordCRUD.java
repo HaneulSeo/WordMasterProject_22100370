@@ -1,11 +1,16 @@
 package com.mycom.word;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WordCRUD implements ICRUD{
 	ArrayList<Word> list;
 	Scanner s;
+	final String fname = "Dictionary.txt";
 	
 	WordCRUD(Scanner s){
 		list = new ArrayList<>();
@@ -83,6 +88,49 @@ public class WordCRUD implements ICRUD{
 		Word word = list.get(idlist.get(id-1));
 		word.setMeaning(meaning);
 		System.out.println("단어가 수정되었습니다. ");
+	}
+	
+	public void deleteItem() {
+		System.out.print("=> 삭제할 단어 검색: ");
+		String keyword = s.next();
+		ArrayList<Integer> idlist = this.listAll(keyword);
+		System.out.print("=> 삭제할 번호 선택: ");
+		int id = s.nextInt();
+		s.nextLine();
+		System.out.print("=> 정말로 삭제하시겠습니까?(Y/n) ");
+		String answer = s.next();
+		if (answer.equalsIgnoreCase("y")) {
+			list.remove((int)idlist.get(id-1));
+			System.out.println("단어가 삭제되었습니다. ");
+		}
+		else
+			System.out.println("취소되었습니다. ");
+	}
+	
+	public void loadFile() {
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(fname));
+			String line;
+			int count = 0;
+			
+			while(true) {
+				line = br.readLine();
+				if(line == null) break;
+				
+				String data[] = line.split("\\|");
+				int level = Integer.parseInt(data[0]);
+				String word = data[1];
+				String meaning = data[2];
+				list.add(new Word(0, level, word, meaning));
+				count++;
+			}
+			
+			br.close();
+			System.out.println("==> " + count + "개 로딩 완료!!! ");
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
