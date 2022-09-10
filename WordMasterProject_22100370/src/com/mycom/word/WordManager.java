@@ -47,9 +47,15 @@ public class WordManager {
 				break;
 			}
 			if(menu == 4) {
-				wordCRUD.addWord();
+				wordCRUD.addItem();
 			}
 			else if(menu == 1) {
+				wordCRUD.listAll();
+			}
+			else if(menu == 5) {
+				wordCRUD.updateItem();
+			}
+			else if(menu == 6) {
 				wordCRUD.listAll();
 			}
 		}
