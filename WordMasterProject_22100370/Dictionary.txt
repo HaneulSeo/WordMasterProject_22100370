@@ -3,4 +3,31 @@
 2|equipment|장비, 용품
 1|pole|기둥, 장대
 1|formerly|이전에, 예전에
-1| apple|apple
+2|patriotism|애국심
+1|culture|문화
+2|conscience|양심
+1|passion|열정
+2|vanity|허영심
+3|anachronism|시대착오
+1|system|조직, 체계, 제도
+2|conquest|정복
+2|convenience|편리
+1|challenge|도전
+1|panic|공황, 당황
+2|monopoly|독점
+1|hardship|고난
+1|species|종류, 인류
+1|moisture|습기
+2|solitude|고독
+1|destiny|운명
+2|compromise|타협, 타협하다
+1|theory|이론
+1|increase|증가
+1|decrease|감소
+2|pastime|오락, 기분전환
+3|eloquence|웅변
+1|access|접근
+1|purpose|목적
+2|courtesy|예절
+3|relinquish|그만두다, 버리다, 양도하다
+2|coercive|강제적인, 위압적인
