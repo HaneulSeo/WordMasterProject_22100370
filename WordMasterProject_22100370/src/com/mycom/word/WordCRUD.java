@@ -171,5 +171,4 @@ public class WordCRUD implements ICRUD{
 		String keyword = s.next();
 		listAll(keyword);
 	}
-
 }
