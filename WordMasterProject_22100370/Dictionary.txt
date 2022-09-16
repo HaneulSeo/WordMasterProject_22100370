@@ -1,5 +1,4 @@
 3|superintendent|관리자, 감독관
-1|electric|전기의
 2|equipment|장비, 용품
 1|pole|기둥, 장대
 1|formerly|이전에, 예전에
@@ -12,7 +11,7 @@
 1|system|조직, 체계, 제도
 2|conquest|정복
 2|convenience|편리
-1|challenge|도전
+1|challenge|도전, 도전하다
 1|panic|공황, 당황
 2|monopoly|독점
 1|hardship|고난
